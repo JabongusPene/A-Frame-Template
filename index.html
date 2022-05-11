@@ -1,15 +1,19 @@
 <html>
   <head>
     <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aframe-enviropacks@latest/aframe-enviropacks.js"></script>
+
   </head>
   <body>
     <a-scene>
       <assets>
+        <img id="sky" src="/A-Frame-Template/assets/img/pink_cow.webp"/>
         <a-asset-item id="house" src="https://raw.githubusercontent.com/JabongusPene/A-Frame-Template/d7547958a9b5309294b8a3d01a9adec77ffde3bb/assets/building/scene.gltf"></a-asset-item>
       </assets>
-      <a-sky color="#cb586c"></a-sky>
-      <a-gltf-model id="room" src="#house" position="0 10.075 0"></a-gltf-model>
-      <a-plane id="ground"></a-plane>
+      <a-sky src="#sky"></a-sky>
+      <a-gltf-model id="room" src="#house" position="0 10.663s 0"></a-gltf-model>
+      <a-entity enviropack="preset: tankfarm"></a-entity>
+      <!-- <a-plane id="ground" src="#sky" rotation="-90 0 0" scale="100 100 100"></a-plane>d -->
     </a-scene>
   </body>
 </html>
